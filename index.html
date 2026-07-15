@@ -12,7 +12,7 @@
         <div class="business-card">
             <div class="card-front">
                 <div class="card-header">
-                    <div class="logo-area" id="logoArea">
+                    <div class="logo-area">
                         <img src="convex-logo.png.webp" alt="Convex-Tech Logo">
                     </div>
                     <h1 class="company-name">Convex<span>-Tech</span></h1>
@@ -23,7 +23,7 @@
                     <div class="services-list">
                         <div class="service-item">
                             <div class="service-icon">
-                                <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12" y2="18"></line></svg>
+                                <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12" y2="18"></line></svg>
                             </div>
                             <div class="service-text">
                                 <strong>App Development</strong>
@@ -32,7 +32,7 @@
                         </div>
                         <div class="service-item">
                             <div class="service-icon">
-                                <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+                                <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
                             </div>
                             <div class="service-text">
                                 <strong>Website Development</strong>
@@ -41,7 +41,7 @@
                         </div>
                         <div class="service-item">
                             <div class="service-icon">
-                                <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.5 2v6h-6M2.5 22v-6h6M2 11.5a10 10 0 0 1 18.8-4.3M22 12.5a10 10 0 0 1-18.8 4.2"></path></svg>
+                                <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2"><path d="M21.5 2v6h-6M2.5 22v-6h6M2 11.5a10 10 0 0 1 18.8-4.3M22 12.5a10 10 0 0 1-18.8 4.2"></path></svg>
                             </div>
                             <div class="service-text">
                                 <strong>Website Updates & Maintenance</strong>
@@ -66,24 +66,18 @@
                 </div>
                 <div class="card-qr">
                     <div class="qr-wrapper">
-                        <canvas id="qrCode"></canvas>
+                        <img src="https://api.qrserver.com/v1/create-qr-code/?size=140x140&data=https://gregory0699industries-creator.github.io/convex-tech-card&color=e63946&bgcolor=ffffff" alt="QR Code" width="140" height="140">
                     </div>
                     <p class="qr-label">Scan to visit our website</p>
                 </div>
             </div>
         </div>
         <div class="card-actions">
-            <button class="action-btn" id="downloadBtn">
-                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
-                Download Card
-            </button>
-            <button class="action-btn" id="shareBtn">
-                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line></svg>
-                Share
-            </button>
+            <button class="action-btn" onclick="alert('To save: take a screenshot or use Ctrl+P to save as PDF')">Download Card</button>
+            <button class="action-btn" onclick="navigator.clipboard.writeText('https://gregory0699industries-creator.github.io/convex-tech-card');alert('Link copied!')">Share</button>
         </div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/qrcode@1.5.3/build/qrcode.min.js"></script>
-    <script src="card-script.js"></script>
+    <link rel="stylesheet" href="card-styles.css">
 </body>
 </html>
+
